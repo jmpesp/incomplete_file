@@ -1,16 +1,16 @@
-use rand::rngs::ThreadRng;
-use rand::Rng;
-use std::fs::File;
-use std::fs::Metadata;
-use std::io::{Read, Result, Seek, SeekFrom, Write};
-use std::path::Path;
-
 //! Rust's std::io::Read and std::io::Write traits both document that the read
 //! and write functions can incompletely fill the buffer, but this case is rare.
 //! Code must be written to handle this case and this can go untested.
 //!
 //! This crate provides "IncompleteFile" that truncates the read and write size
 //! and allows testing of those code paths.
+
+use rand::rngs::ThreadRng;
+use rand::Rng;
+use std::fs::File;
+use std::fs::Metadata;
+use std::io::{Read, Result, Seek, SeekFrom, Write};
+use std::path::Path;
 
 pub struct IncompleteFile {
     file: File,
