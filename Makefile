@@ -1,5 +1,5 @@
 
-.PHONY: all clippy fmt test build clean fix
+.PHONY: all clippy fmt test build clean fix doc
 
 all: clippy
 
@@ -20,4 +20,7 @@ clean:
 
 fix:
 	cargo fix --allow-dirty
+
+doc:
+	cargo readme > README.md
 
