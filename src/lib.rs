@@ -1,3 +1,9 @@
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+
 //! Rust's std::io::Read and std::io::Write traits both document that the read
 //! and write functions can incompletely fill the buffer, but this case is rare.
 //! Code must be written to handle this case and this can go untested.
